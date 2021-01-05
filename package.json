@@ -12,9 +12,9 @@
     "server",
     "node",
     "bot",
-    "psycology"
+    "psychology",   "psychiatry",   "chatbot",   "psychiatrist"
   ],
-  "author": "AstalDev AlexPuth",
+  "author": "AstalDev Abbaskhurram255",
   "license": "ISC",
   "dependencies": {
     "cookie-parser": "^1.4.5",
