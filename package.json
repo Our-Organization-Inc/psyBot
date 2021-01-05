@@ -1,0 +1,25 @@
+{
+  "name": "psybot",
+  "version": "1.0.0",
+  "description": "A bot to help psycologically imbalanced patients",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "psybot",
+    "server",
+    "node",
+    "bot",
+    "psycology"
+  ],
+  "author": "AstalDev AlexPuth",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express-session": "^1.17.1",
+    "md5": "^2.3.0",
+    "sqlite": "^4.0.19"
+  }
+}

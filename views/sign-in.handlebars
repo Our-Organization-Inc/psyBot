@@ -1,0 +1,53 @@
+<form class="form" method="POST" action="{{s_or_lg}}">
+  <table class="table">
+    <thead>
+      <tr>
+        <th colspan="2">{{s_or_l}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>User name </td>
+        <td><input type="text" placeholder="Enter name" name="usrname"></td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td><input type="password" placeholder="Enter password" name="usrpass"></td>
+      </tr>
+      <tr id="hidden">
+        <td>Confirm Password</td>
+        <td><input type="password" name="confpass" name="confpass" placeholder="Confirm Password"></td>
+      </tr>
+      <tr id="hidden">
+        <td>Email Address</td>
+        <td><input type="email" name="email" name="usremail" placeholder="Enter Email"></td>
+      </tr>
+      <tr>
+        <td colspan="2">{{s-cont}} <a href="{{s-link}}">{{s-text}}</a></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="2"><button type="submit" id="out">{{s_or_l}}</button></td>
+      </tr>
+    </tfoot>
+  </table>
+</form>
+{{#section 'javascript'}}
+<script>
+  var hidden = document.querySelectorAll("#hidden");
+  sl = document.querySelector("#out").innerText;
+  console.log(sl);
+  if(sl == "Sign in"){
+    for(let item of hidden){
+      item.className = item.className.replace("hidden", "");
+      item.children[1].children[0].setAttribute("required", true)
+    }
+  }else if(sl == "Log in"){
+    for(let item of hidden){
+      item.className =  "hidden";
+      item.children[1].children[0].removeAttribute("required")
+    }
+  }
+</script>
+{{/section}}
