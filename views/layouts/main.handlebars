@@ -1,9 +1,41 @@
 <!DOCTYPE html>
-<head> 
-  <link rel="stylesheet" href="css/style.css">
-  <title>PsyBot</title>
+
+<head>
+    <link rel="stylesheet" href="css/style.css">
+    <title>PsyBot</title>
 </head>
+
 <body>
-  {{{body}}}
-  {{{_sections.javascript}}}
+    <div class="content">
+
+    <div class="nav">
+        <div class="title">
+            <span>PsyBot</span>
+        </div>
+        <div class="nav-body">
+            <ul class="no-style">
+                <li><a href="/home">Home</a></li>
+                <li><a href="/">Features</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="#contact">Contact us</a></li>
+                <li><a href="/">Help</a></li>
+            </ul>
+        </div>
+        <div class="nav-end">
+            <ul class="no-style">
+                <li><a href="{{s_or_lg}}">{{s_or_l}}</a></li>
+            </ul>
+        </div>
+    </div>
+    {{{body}}}
+    <div class="footer" id="footer">
+        <ul class="no-style">
+            <li>Help</li>
+            <li>Contact us</li>
+            <li>Support us</li>
+        </ul>
+    </div>
+    </div>
+    <script src="js/jquery.js"></script>
+    {{{_sections.javascript}}}
 </body>
