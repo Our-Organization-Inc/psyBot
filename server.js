@@ -1,4 +1,5 @@
 const express = require('express'),
+  PORT = process.env.PORT || 3380,
   app = express(),
   handlebars = require('express3-handlebars')
     .create({
@@ -71,6 +72,6 @@ app.post("/login", (req, res) => {
   res.redirect("/")
 })
 
-app.listen(3380, () => {
+app.listen(PORT, () => {
   console.log(`Server started on http://localhost:3380/`);
 });
