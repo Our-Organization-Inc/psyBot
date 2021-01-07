@@ -9,27 +9,23 @@ const express = require('express'),
           return null;
         }
       }
-    }),
-  data = {
-    users: ["pop"],
-    pass: ["ppppp"],
-    email: ["ppddpd"]
-  }
+    })
 
 app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + "/public"))
 app.use(require('body-parser')());
 app.use(require("cookie-parser")(require("./modules/credentials.js")))
+
 app.use(require("./api/script.js"))
 
 
 app.get("/home", (req, res) => {
-  if (req.cookies.usrname) {
+  if (req.cookies.usrname != undefined || "") {
     res.render('home', { s_or_l: "Sign out", s_or_lg: "/sign-out", usrname: req.cookies.usrname })
   }
   else
-  res.render('home', { s_or_l: "Log in", s_or_lg: "/login" });
+  res.render('home', { s_or_l: "Log in", s_or_lg: "/login", usrname: false});
 })
 
 app.get("/", (req, res) => {
@@ -66,13 +62,11 @@ app.get("/sign-out", (req, res)=>{
 })
 
 app.post("/sign-up", (req, res)=>{
-  console.log(req.body.usrname, " just signed up")
   res.redirect("/")
 })
 app.post("/login", (req, res) => {
-  console.log(req.body.usrname, "just logged in")
   if(req.body.usrname != undefined || ""){
-    res.cookie("usrname", req.body.usrname, {maxAge: 60*60*2})
+    res.cookie("usrname", req.body.usrname, {maxAge: 60*60*5})
   }
   res.redirect("/")
 })
