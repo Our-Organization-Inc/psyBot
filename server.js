@@ -66,7 +66,7 @@ app.post("/sign-up", (req, res)=>{
   res.redirect("/")
 })
 app.post("/login", (req, res) => {
-  if(req.body.usrname != undefined || ""){
+  if(req.body.usrname !== undefined || ""){
     res.cookie("usrname", req.body.usrname, {maxAge: 60*60*5})
   }
   res.redirect("/")
