@@ -14,7 +14,7 @@
 <div class="q-point">
   <div class="q-p">
     <form method="POST" id="q-form" action="/question" >
-      <input type="text" placeholder="Let us know what condition you are facing" id="q-input" name="question">
+      <input type="text" placeholder="Tell me what condition you are facing" id="q-input" name="question">
       <button type="submit">Ask</button>
     </form>
   </div>
@@ -37,7 +37,7 @@
             $("div.res-p").html(data.content)
           }
         },
-        error: $("div.res-p").html("<code><em>Server Error</em> :(</code>")
+        error: $("div.res-p").html("<em>Server Error </em>")
       })
     })
   })

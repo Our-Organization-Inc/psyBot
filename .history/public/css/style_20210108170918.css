@@ -10,7 +10,7 @@ html {
 
 div.content {
   position: relative;
-  overflow-x: hidden;
+  overflow-x: auto;
   display: flex;
   flex-direction: row;
   height: 100%;

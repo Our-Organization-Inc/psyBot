@@ -37,7 +37,7 @@
             $("div.res-p").html(data.content)
           }
         },
-        error: $("div.res-p").html("<code><em>Server Error</em> :(</code>")
+        error: $("div.res-p").text("<em>Server Error</em> :(")
       })
     })
   })

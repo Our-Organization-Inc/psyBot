@@ -9,8 +9,6 @@ html {
 }
 
 div.content {
-  position: relative;
-  overflow-x: hidden;
   display: flex;
   flex-direction: row;
   height: 100%;
@@ -147,6 +145,13 @@ button[type="submit"] {
 .q-point {
   margin: 0 auto;
   width: 95%;
+  /* border: 1px dotted rgb(41, 41, 41); */
+  /* background: linear-gradient(indigo, purple); */
+  /* border-radius: 20px; */
+  /* -webkit-border-radius: 20px; */
+  /* -moz-border-radius: 20px; */
+  /* -ms-border-radius: 20px; */
+  /* -o-border-radius: 20px; */
 }
 
 .q-point input {

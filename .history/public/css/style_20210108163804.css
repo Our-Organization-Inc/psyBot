@@ -9,8 +9,6 @@ html {
 }
 
 div.content {
-  position: relative;
-  overflow-x: hidden;
   display: flex;
   flex-direction: row;
   height: 100%;
@@ -20,7 +18,7 @@ ul.no-style {
   list-style-type: none;
 }
 
-div.nav-body {
+div.nav-body{
   margin-bottom: 50%;
 }
 
@@ -37,10 +35,6 @@ div.nav-body ul li:nth-child(odd):hover {
   background: rgb(24, 24, 24);
 }
 
-div.nav-body ul li:nth-child(even):hover {
-  background: #222222;
-}
-
 div.news {
   margin: 20px;
   padding: 4px;
@@ -54,16 +48,19 @@ form {
   padding: 4px;
 }
 
-div.res-p {
+.res-p {
   position: relative;
-  left: 10%;
-  color: black;
+  left: 3px;
+  color: whitesmoke;
+}
+
+div.nav-body ul li:nth-child(even):hover {
+  background: #222222;
 }
 
 div.nav-end {
-  margin-top: 120%;
+  display: block;
 }
-
 div.nav-end ul li {
   display: flex;
   height: 43px;
@@ -86,7 +83,7 @@ li a {
   height: 100%;
 }
 
-div.footer {
+div.footer{
   background-color: rgb(41, 41, 41);
   margin-top: auto;
   position: absolute;
@@ -98,7 +95,7 @@ div.footer {
   height: 8%;
 }
 
-ul.horizontal li {
+ul.horizontal li{
   margin: 10px;
   display: inline-flex;
   align-items: center;
@@ -125,18 +122,18 @@ body.body {
   margin: auto;
 }
 
-input {
+input{
   height: 40px;
   border: 1px solid rgb(41, 41, 41);
   border-radius: 5px;
   outline: none;
   padding: 5px;
-  box-shadow: 0.2px 0.4px 0.6px rgb(10, 10, 10);
+  box-shadow: 0.2px 0.4px 0.6px rgb(10,10,10);
 }
-button[type="submit"] {
+button[type=submit]{
   height: 40px;
   border: 1px solid rgb(49, 49, 49);
-  box-shadow: 1px 0.5px 1.5px rgb(0, 0, 0);
+  box-shadow: 1px 0.5px 1.5px rgb(0,0,0);
   padding: 10px;
   border-radius: 5px;
   min-width: 40px;
@@ -144,16 +141,23 @@ button[type="submit"] {
   color: #fff;
 }
 
-.q-point {
+.q-point{
   margin: 0 auto;
   width: 95%;
+  /* border: 1px dotted rgb(41, 41, 41); */
+  /* background: linear-gradient(indigo, purple); */
+  /* border-radius: 20px; */
+  /* -webkit-border-radius: 20px; */
+  /* -moz-border-radius: 20px; */
+  /* -ms-border-radius: 20px; */
+  /* -o-border-radius: 20px; */
 }
 
-.q-point input {
+.q-point input{
   width: 70%;
-  box-shadow: 1px 0.5px 1.5px rgb(0, 0, 0);
+  box-shadow: 1px 0.5px 1.5px rgb(0,0,0);
 }
-.q-point button {
+.q-point button{
   width: 20%;
   margin: 1px auto;
 }
