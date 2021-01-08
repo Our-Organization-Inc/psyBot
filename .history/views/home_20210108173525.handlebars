@@ -1,0 +1,47 @@
+<div>
+  {{#if usrname}}
+  Logged in as {{usrname}}
+  {{/if}}
+  {{#else}}
+  <a href="./login">Log in</a> to continue
+  {{/else}}
+</div>
+<div class="b-content">
+<div class="news">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+  aliqua. Senectus et netus et malesuada fames ac turpis egestas integer. Aliquet enim tortor at auctor urna nunc id
+  cursus metus. Sit amet est placerat in egestas erat.
+</div>
+<div class="q-point">
+  <div class="q-p">
+    <form method="POST" id="q-form" action="/question" >
+      <input type="text" placeholder="Let us know what condition you are facing" id="q-input" name="question">
+      <button type="submit">Ask</button>
+    </form>
+  </div>
+  <div class="res-p">
+    Say hi...
+  </div>
+</div>
+</div>
+{{#section 'javascript'}}
+<script>
+  $(document).ready(()=>{
+    $("#q-form").on('submit', function (e){
+      text = $("#q-input").val()
+      e.preventDefault()
+      $.ajax({
+        url:"/question",
+        type:"POST",
+        data: JSON.parse(`{\"question\" : \"${text}\"}`),
+        success: data=>{
+          if(data.success){
+            $("div.res-p").html(data.content)
+          }
+        },
+        error: $("div.res-p").html("<code><em>Server Error</em> :(</code>")
+      })
+    })
+  })
+</script>
+{{/section}}
