@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body,
 html {
   height: 100%;
@@ -34,44 +35,24 @@ div.nav-body ul li {
 }
 
 div.nav-body ul li:nth-child(odd):hover {
-  background: rgb(24, 24, 24);
+  background: rgb(44, 44, 44)
 }
 
 div.nav-body ul li:nth-child(even):hover {
-  background: #222222;
+  background: rgb(46, 46, 46)
 }
 
-div.b-content{
+div.b-content {
   display: flex;
   flex-direction: column;
   overflow-y: auto;
-  overflow-x: hidden;
   padding: 10px;
   margin-top: 5px;
   height: 90%;
 }
 
-div.news {
-  margin: 20px;
-  padding: 4px;
-  line-height: 23px;
-  word-spacing: 1.6px;
-  letter-spacing: 0.08rem;
-}
-
-form {
-  margin: 24px 24px 10px 24px;
-  padding: 4px;
-}
-
-div.res-p {
-  position: relative;
-  left: 10%;
-  color: black;
-}
-
 div.nav-end {
-  margin-top: 120%;
+  margin-top: 160%;
 }
 
 div.nav-end ul li {
@@ -82,8 +63,9 @@ div.nav-end ul li {
   border-top: 1px solid rgb(49, 49, 49);
 }
 
+
 div.nav-end ul li:hover {
-  background: rgb(75, 75, 75);
+  background: rgb(45, 45, 45);
 }
 
 li a {
@@ -109,9 +91,21 @@ div.footer {
 }
 
 ul.horizontal li {
-  margin: 10px;
-  display: inline-flex;
+  margin: 0 10px;
+  display: inline-block;
   align-items: center;
+  padding: 0 10px;
+}
+
+ul.horizontal {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+
+}
+
+ul.horizontal li:hover {
+  background-color: rgb(44, 44, 44);
 }
 
 div.nav {
@@ -129,6 +123,7 @@ div.title {
 
 div.body {
   margin: 0 5px;
+  width: 100%;
 }
 
 body.body {
@@ -143,7 +138,8 @@ input {
   padding: 5px;
   box-shadow: 0.2px 0.4px 0.6px rgb(10, 10, 10);
 }
-button[type="submit"] {
+
+button[type=submit] {
   height: 40px;
   border: 1px solid rgb(49, 49, 49);
   box-shadow: 1px 0.5px 1.5px rgb(0, 0, 0);
@@ -155,15 +151,92 @@ button[type="submit"] {
 }
 
 .q-point {
-  margin: 0 auto;
-  width: 95%;
+  margin: auto auto 0 auto;
+  width: 100%;
+  box-shadow: 0.4px 0.6px 1px rgb(51, 51, 51);
+  border: 0.5px solid rgb(44, 44, 44);
+  border-radius: 10px;
+  height: 60%;
+  padding: 5px;
+}
+
+div.q-p {
+  width: 100%;
+  padding-bottom: 10px;
+  display: block;
+  border-bottom: 0.5px solid rgb(121, 121, 121);
 }
 
 .q-point input {
   width: 70%;
   box-shadow: 1px 0.5px 1.5px rgb(0, 0, 0);
+  margin: 0 auto;
 }
+
 .q-point button {
   width: 20%;
   margin: 1px auto;
+}
+
+.q-point button:hover {
+  border: 1px solid rgb(58, 48, 202);
+  transition: border 1s 0.5s linear;
+}
+
+.q-point input:hover {
+  border: 1px solid rgb(58, 48, 202);
+  transition: all 1s 0.5s linear;
+}
+
+button.shake:hover {
+  animation: shake 0.4s 1 linear;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(1deg)
+  }
+
+  25% {
+    transform: rotate(-1deg);
+  }
+
+  50% {
+    transform: rotate(1deg);
+  }
+
+  75% {
+    transform: rotate(-1deg);
+  }
+
+  100% {
+    transform: rotate(1deg);
+  }
+}
+
+@-webkit-keyframes shake {
+  0% {
+    transform: translateX(1px);
+    transition: all 0.25s linear;
+  }
+
+  25% {
+    transform: translateX(-1px);
+    transition: all 0.25s linear;
+  }
+
+  50% {
+    transform: translateX(-1px);
+    transition: all 0.25s linear;
+  }
+
+  75% {
+    transform: translateX(2px);
+    transition: all 0.25s linear;
+  }
+
+  100% {
+    transform: translateX(-2px);
+    transition: all 0.25s linear;
+  }
 }

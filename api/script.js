@@ -29,7 +29,7 @@ var answers = {
           Even though try your best to be happy at all times."],
     "3": ["of course", "if others don\'t I do", "God does"],
     "4":[`Nightmares tend to be caused by stress, anxiety, or sometimes as a reaction to certain medications`],
-    "5":[`Hey ${usrname}. How are you feeling?`, `Hi ${usrname}. How are you? And What can I help you with?`, `How are you doing, ${usrname}?`],
+    "5":[`Hey ${usrname}. How are you feeling?`, `Hi ${usrname}. How are you? And what can I help you with?`, `How are you doing ${usrname}?`],
     "6":["Causes of sleepwalking include: Hereditary (the condition may run in families). Lack of sleep or extreme fatigue. Interrupted sleep or unproductive sleep, from disorders like sleep apnea (brief pauses in the child's breathing pattern during sleep)"]
 }
 
